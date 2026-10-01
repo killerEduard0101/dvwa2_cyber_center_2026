@@ -13,7 +13,7 @@ jobs:
     environment:
       name: release
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
       - name: Set up JDK
         uses: ./.github/actions/java-setup
@@ -93,7 +93,7 @@ jobs:
     steps:
       # The workflow is triggered by a tag, checking out main makes sure the branch we push and the
       # pull request we open only contain the version bump.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
         with:
           ref: main
           fetch-depth: 0
